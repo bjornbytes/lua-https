@@ -150,12 +150,8 @@ endif ()
 
 if (USE_NSURL_BACKEND)
 	set(HTTPS_BACKEND_NSURL ON)
-	set_target_properties(
-		https-nsurl
-		PROPERTIES
-		MACOSX_BUNDLE YES
-		XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC YES  
-	)
+	set_target_properties(https-nsurl PROPERTIES MACOSX_BUNDLE YES)
+	target_compile_options(https-nsurl PRIVATE "-fobjc-arc")
 	target_link_libraries (https "-framework Foundation")
 	target_link_libraries (https https-nsurl)
 endif ()
