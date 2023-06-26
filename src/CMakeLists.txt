@@ -164,7 +164,7 @@ endif ()
 
 if (USE_WININET_BACKEND)
 	set(HTTPS_BACKEND_WININET ON)
-	target_link_libraries (https https-wininet wininet)
+	target_link_libraries (https https-wininet wininet ws2_32)
 endif ()
 
 if (USE_WINSOCK)
