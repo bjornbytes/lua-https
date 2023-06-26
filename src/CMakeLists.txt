@@ -15,7 +15,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
 endif ()
 
 if (LOVR)
-  set(LUA_LIBRARIES ${LOVR_LUA})
+	set(LUA_LIBRARIES ${LOVR_LUA})
 else()
 ### Dependencies
 	find_package (LuaJIT)
