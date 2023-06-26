@@ -80,7 +80,7 @@ if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
 elseif (WIN32)
 	option (USE_CURL_BACKEND "Use the libcurl backend" OFF)
 	option (USE_OPENSSL_BACKEND "Use the openssl backend" OFF)
-	option (USE_SCHANNEL_BACKEND "Use the schannel backend (windows-only)" ON)
+	option (USE_SCHANNEL_BACKEND "Use the schannel backend (windows-only)" OFF)
 	option (USE_NSURL_BACKEND "Use the NSUrl backend (apple-only)" OFF)
 	option (USE_ANDROID_BACKEND "Use the Android Java backend (Android-only)" OFF)
 
